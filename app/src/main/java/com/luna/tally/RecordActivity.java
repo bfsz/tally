@@ -10,6 +10,7 @@ import android.view.View;
 import com.google.android.material.tabs.TabLayout;
 import com.luna.tally.adapter.RecordPagerAdapter;
 import com.luna.tally.frag_record.IncomeFragment;
+import com.luna.tally.frag_record.BaseRecordFragment;
 import com.luna.tally.frag_record.OutcomeFragment;
 
 import java.util.ArrayList;
