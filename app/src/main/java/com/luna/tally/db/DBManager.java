@@ -125,4 +125,12 @@ public class DBManager {
         return total;
     }
 
+    /*
+     * 根据 id 删除 accounttb 一条数据
+     * */
+    public static int deleteItemFromAccounttbById(int id) {
+        int i = db.delete("accounttb", "id=?", new String[]{id + ""});
+        return i;
+    }
+
 }
