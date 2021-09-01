@@ -94,6 +94,7 @@ public class DBManager {
             @SuppressLint("Range") double money = cursor.getDouble(cursor.getColumnIndex("sum(money)"));
             total = money;
         }
+        cursor.close();
         return total;
     }
 
@@ -108,6 +109,7 @@ public class DBManager {
             @SuppressLint("Range") double money = cursor.getDouble(cursor.getColumnIndex("sum(money)"));
             total = money;
         }
+        cursor.close();
         return total;
     }
 
@@ -122,6 +124,7 @@ public class DBManager {
             @SuppressLint("Range") double money = cursor.getDouble(cursor.getColumnIndex("sum(money)"));
             total = money;
         }
+        cursor.close();
         return total;
     }
 
@@ -133,4 +136,17 @@ public class DBManager {
         return i;
     }
 
+    /*
+     * 根据备注搜索 收入支出情况列表
+     * */
+    public static List<AccountBean> getAccountListByRemarkFromAccounttb(String beizhu) {
+        List<AccountBean> list = new ArrayList<>();
+        String sql = "select * from accounttb where beizhu like '%?%'";
+        Cursor cursor = db.rawQuery(sql, null);
+        while (cursor.moveToNext()) {
+
+        }
+        cursor.close();
+        return list;
+    }
 }
